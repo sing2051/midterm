@@ -1,0 +1,218 @@
+html {
+    font-size: 100%;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+    line-height: 1.6;
+}
+
+
+header {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+header h1 .highlight {
+    color: #00aaff;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: #fff;
+    margin: 0 1rem;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #00aaff;
+}
+
+
+.hero {
+    background: url('images/milky-way.jpg') no-repeat center center/cover;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    animation: zoomBackground 30s infinite linear;
+}
+
+@keyframes zoomBackground {
+    0% {
+        background-size: 100%;
+    }
+
+    50% {
+        background-size: 120%;
+    }
+
+    100% {
+        background-size: 100%;
+    }
+}
+
+.hero-text h2 {
+    font-size: 3rem;
+    animation: colorChange 10s infinite alternate;
+}
+
+@keyframes colorChange {
+    0% {
+        color: #fff;
+    }
+
+    100% {
+        color: #fff;
+    }
+}
+
+.hero-text h2 .highlight {
+    color: #00aaff;
+    animation: highlightColorChange 10s infinite alternate;
+}
+
+@keyframes highlightColorChange {
+    0%, 100% {
+        color: #00aaff;
+    }
+
+    50% {
+        color: #fff;
+    }
+}
+
+
+section.locals {
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+.locals h3 {
+    margin-bottom: 1rem;
+}
+
+.planets {
+    display: flex;
+    overflow-x: auto;
+    gap: 1.5rem;
+    padding: 0 1rem;
+    justify-content: flex-start;
+}
+
+.planet {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 200px;
+    max-width: 250px;
+}
+
+.planet:hover {
+    transform: scale(1.1);
+}
+
+.planet img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 0.5rem;
+}
+
+.planet h4 {
+    margin: 0.5rem 0;
+}
+
+
+button {
+    padding: 0.5rem 1rem;
+    background: #00aaff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background: #0088cc;
+    transform: scale(1.05);
+}
+
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #111;
+}
+
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 20px;
+    background-color: #00aaff;
+    color: #fff;
+    padding: 0.5rem;
+    text-decoration: none;
+    border-radius: 4px;
+    z-index: 10;
+    transition: top 0.3s ease, opacity 0.3s ease;
+}
+
+.skip-link:focus {
+    top: 20px;
+    opacity: 1;
+}
+
+
+@media (max-width: 900px) {
+    .planets {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .planet {
+        min-width: 200px; 
+        max-width: 250px;
+    }
+}
+
+@media (max-width: 500px) {
+    .planets {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .planet {
+        width: 90%; 
+        margin-bottom: 2rem;
+    }
+}

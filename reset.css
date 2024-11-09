@@ -1,0 +1,83 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+a,
+a:visited {
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    font-size: 100%;  
+    line-height: 1.4; 
+}
+
+
+ul,
+ol {
+    list-style: none;
+}
+
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+caption,
+th,
+td {
+    text-align: left;
+}
+
+
+button,
+input,
+select,
+textarea {
+    font-family: inherit;
+    font-size: inherit;
+    border: none;
+    background: none;
+}
+
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+
+html,
+body {
+    overflow-x: hidden;  
+}
+
+
+html {
+    -webkit-text-size-adjust: 100%; 
+}
+
+
+input,
+button,
+textarea,
+select {
+    outline: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
